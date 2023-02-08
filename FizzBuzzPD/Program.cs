@@ -7,31 +7,25 @@ namespace FizzBuzzPD
     {
         static void Main(string[] args)
         {
-            
             Console.WriteLine("Witaj w programie \"Fizz Buzz\"!");
             while (true)
             {
                 try
                 {
-
                     Console.WriteLine("Proszę o podanie liczby: ");
 
                     if (!int.TryParse(Console.ReadLine(), out int input))
                         throw new Exception();
 
-
-
                     var fizzBuzz = new FizzBuzz();
 
                     Console.WriteLine(fizzBuzz.GetFizzBuzzResult(input));
-
                 }
                 catch (Exception)
                 {
                     Console.WriteLine("Podałeś nieprawidłową liczbę.");
                 }
             }
-            
         }
     }
 }

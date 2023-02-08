@@ -18,7 +18,7 @@ namespace FizzBuzzPD
             if (input % 5 == 0)
                 return "Buzz";
             else
-                return input.ToString();
+                return $"{input} nie jest podzielna ani przez 3, ani przez 5.";
         }
     }
 }

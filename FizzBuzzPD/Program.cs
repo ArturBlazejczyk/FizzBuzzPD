@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Reflection.Metadata.Ecma335;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace FizzBuzzPD
 {
@@ -6,16 +7,31 @@ namespace FizzBuzzPD
     {
         static void Main(string[] args)
         {
+            
             Console.WriteLine("Witaj w programie \"Fizz Buzz\"!");
-            Console.WriteLine("Proszę o podanie liczby: ");
+            while (true)
+            {
+                try
+                {
 
-            if (!int.TryParse(Console.ReadLine(), out int input))
-                throw new ArgumentOutOfRangeException();
+                    Console.WriteLine("Proszę o podanie liczby: ");
 
-            var fizzBuzz = new FizzBuzz();
+                    if (!int.TryParse(Console.ReadLine(), out int input))
+                        throw new Exception();
 
-            Console.WriteLine(fizzBuzz.GetFizzBuzzResult(input));
 
+
+                    var fizzBuzz = new FizzBuzz();
+
+                    Console.WriteLine(fizzBuzz.GetFizzBuzzResult(input));
+
+                }
+                catch (Exception)
+                {
+                    Console.WriteLine("Podałeś nieprawidłową liczbę.");
+                }
+            }
+            
         }
     }
 }

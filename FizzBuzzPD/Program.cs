@@ -8,6 +8,11 @@ namespace FizzBuzzPD
         static void Main(string[] args)
         {
             Console.WriteLine("Witaj w programie \"Fizz Buzz\"!");
+            GetNumber();    
+        }
+
+        private static void GetNumber()
+        {
             while (true)
             {
                 try

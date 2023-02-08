@@ -13,12 +13,14 @@ namespace FizzBuzzPD
         {
             if (input % 3 == 0 && input % 5 == 0)
                 return "FizzBuzz";
+
             if (input % 3 == 0)
                 return "Fizz";
+
             if (input % 5 == 0)
                 return "Buzz";
-            else
-                return $"{input} nie jest podzielna ani przez 3, ani przez 5.";
+
+            return $"{input} nie jest podzielna ani przez 3, ani przez 5.";
         }
     }
 }
